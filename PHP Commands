@@ -1,0 +1,73 @@
+
+# create project command and here project name is example-app
+
+  composer create-project laravel/laravel example-app
+
+# after the craete the project run the command
+
+  composer global require laravel/installer
+
+# the create laravel app using this command
+
+  laravel new mylaravelapp
+
+# then move in app
+
+  cd mylaravelapp
+
+# the run command is
+
+  php artisan serve
+
+# How can I resolve "Your requirements could not be resolved to an installable set of packages" error?
+
+  composer install --ignore-platform-reqs
+
+  composer update --ignore-platform-reqs
+
+# Composer is operating significantly slower than normal because you do not have the PHP curl extension enabled.
+
+
+# fx-site run project version is
+
+  sudo apt-get install php7.4-curl
+
+
+# migrations commands
+
+# for create the table
+
+  php artisan make:migration create_tablename_table
+
+# then after run this command
+
+  php artisan migrate
+
+# for rollback
+
+  php artisan migrate:rollback && php artisan migrate:rollback --step=2
+
+  php artisan migrate:reset # all table's are not migrate
+
+# for refresh the all table so that delete the table data
+
+  php artisan migrate:refresh
+ 	
+# rename the table name using this command
+
+  php artisan make:migration rename_oldnameoftable_to_newnameoftable
+
+# seeder class
+
+  php artisan make:model student --seed 
+
+# generating model class(migrations, factory, seeder and controller)
+
+  php artisan make:model student --mfsc
+
+# create controller using this command
+  
+  php artisan make:controller EmployeeController -r
+
+
+
